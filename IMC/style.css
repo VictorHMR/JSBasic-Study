@@ -4,10 +4,11 @@ body{
     margin: 0 auto;
 }
 header{
-    margin-top:0;
+    margin: 0 auto;    
     text-align: center;
     background-color: rgb(171, 99, 238);
     border-radius: 5px;
+    width: 190px;
     color: azure;
 }
 footer{
@@ -21,7 +22,6 @@ section{
     background-color: teal;
     width: 300px;
     margin: 0 auto;
-    padding-top: 0;
     padding: 15px;
     text-align: center;
     
