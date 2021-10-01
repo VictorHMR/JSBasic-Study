@@ -4,6 +4,7 @@ body{
     margin: 0 auto;
 }
 header{
+    margin-top:0;
     text-align: center;
     background-color: rgb(171, 99, 238);
     border-radius: 5px;
