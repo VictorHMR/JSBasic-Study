@@ -15,7 +15,7 @@ function imc () {
     const altura = document.getElementById('altura').value;
     const resultado = document.getElementById('result');
 
-    //const foi usado para a variavel não se alterar
+    //const foi usado para a variavel não se alterar dentro do codigo
 
     if (nome !== '' && altura !== '' && peso !== '') {
 
