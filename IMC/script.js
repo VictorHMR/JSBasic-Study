@@ -6,16 +6,27 @@
 
 const calcular = document.getElementById('calcular');
 
+//getElementById puxa o elemento com o id igual ao que for escrito entre parenteses 
+
 function imc () {
+    
     const nome = document.getElementById('nome').value;
     const peso = document.getElementById('peso').value;
     const altura = document.getElementById('altura').value;
     const resultado = document.getElementById('result');
 
+    //const foi usado para a variavel não se alterar
+
     if (nome !== '' && altura !== '' && peso !== '') {
+
+        // ** significa Elevado a 
+        //toFixed fixa a 1 casa decimal nesse caso
 
         const valorIMC = (peso/(altura**2)).toFixed(1);
         let classificacao = '';
+
+        //let foi usado pois o valor da classificação pode ser mudada durante o codigo
+
         if (valorIMC < 18.5){
             classificacao = 'abaixo do peso.';
         }else if (valorIMC < 25) {
@@ -35,3 +46,4 @@ function imc () {
     }
 }
 calcular.addEventListener('click', imc);
+//adicionando evento de clique, é equivalente ao OnClick do html
