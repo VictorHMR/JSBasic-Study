@@ -25,7 +25,7 @@ function imc () {
         const valorIMC = (peso/(altura**2)).toFixed(1);
         let classificacao = '';
 
-        //let foi usado pois o valor da classificação pode ser mudada durante o codigo
+        //let/var foi usado pois o valor da classificação pode ser mudada durante o codigo
 
         if (valorIMC < 18.5){
             classificacao = 'abaixo do peso.';
