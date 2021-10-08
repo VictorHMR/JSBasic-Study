@@ -24,7 +24,8 @@ function imc () {
 
         const valorIMC = (peso/(altura**2)).toFixed(1);
         let classificacao = '';
-
+        let Max = (25* altura**2).toFixed(1);
+        let Min = (18.5* altura**2).toFixed(1);
         //let/var foi usado pois o valor da classificação pode ser mudada durante o codigo
 
         if (valorIMC < 18.5){
@@ -40,7 +41,7 @@ function imc () {
         }else {
             classificacao = 'com obesidade grau III.';
         }
-        resultado.textContent = `Bem Vindo !, ${nome}! Com ${peso}kg e ${altura}m, seu IMC é ${valorIMC}. Atualmente, você está ${classificacao}`;
+        resultado.textContent = `Bem Vindo ! ${nome}! <br> Com ${peso}kg e ${altura}m, seu IMC é ${valorIMC}.<br> Atualmente, você está ${classificacao} <br> Seu peso minimo é: ${Min} <br> E seu peso maximo é: ${Max}`;
     }else {
         resultado.textContent = 'Preencha todos os campos.';
     }
