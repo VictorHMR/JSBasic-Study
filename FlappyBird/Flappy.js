@@ -163,7 +163,7 @@ function CriaCanos(){                           //Atalho para os canos
 
             const Cflappy = globais.flappybird.y;          //Posição da cabeça do flappy
             const Pflappy = globais.flappybird.y + globais.flappybird.altura;        //posição do pé do flappý
-            if(globais.flappybird.x + globais.flappybird.largura >= par.x){                //Identificar se houve colisão
+            if(globais.flappybird.x + globais.flappybird.largura -5 >= par.x){                //Identificar se houve colisão
                 if(Cflappy <= par.CCeu.y){                    //verificar se foi na cabeça
                     return true;
                 }
