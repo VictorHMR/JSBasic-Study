@@ -105,7 +105,6 @@ const piso={
 }
 return piso;
 };
-
 //Objeto [Cano]
 function CriaCanos(){                           //Atalho para os canos
     const canos={
@@ -253,7 +252,7 @@ const BackGround={
     x: 0,
     y: canvas.height - 204,
     desenho(){
-        ctx.fillStyle = '#70c5ce';                          //Pintar o canvas
+        ctx.fillStyle = '#A0858D';                          //Pintar o canvas
         ctx.fillRect(0, 0, canvas.width, canvas.height);    //Posições pintadas fillRect(Xinicial, Yinicial, Xfinal, Yfinal)
 
         ctx.drawImage(                                     
