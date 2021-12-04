@@ -21,9 +21,9 @@ const flappybird = {
     altura: 24,                  //altura , Tamanho do recorte da imagem 
     x: 10,                       //Posição X da imagem no canvas
     y: 50,                       //Posição Y da imagem no canvas
-    gravidade: 0.25,             //Gravidade do passarinho
+    gravidade: 0.15,             //Gravidade do passarinho
     velocidade: 0,               //Velocidade de queda do passarinho 
-    TPulo: 4.6,                  //Tamanho do pulo do passarinho
+    TPulo: 3.6,                  //Tamanho do pulo do passarinho
     movimentos:[                 //Posições das imagens para efeito de movimento
         {srcX: 0, srcY: 0 ,},          //Asa para cima
         {srcX: 0, srcY: 26,},          //Asa no meio
