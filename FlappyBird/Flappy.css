@@ -1,0 +1,16 @@
+body{
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+canvas{
+    border: 1px solid #000;
+    display: block;
+    margin: 0 auto;
+}
+* {
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+}
