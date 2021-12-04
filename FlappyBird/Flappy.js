@@ -163,11 +163,11 @@ function CriaCanos(){                           //Atalho para os canos
 
             const Cflappy = globais.flappybird.y;          //Posição da cabeça do flappy
             const Pflappy = globais.flappybird.y + globais.flappybird.altura;        //posição do pé do flappý
-            if(globais.flappybird.x + globais.flappybird.largura -10 >= par.x){                //Identificar se houve colisão
-                if(Cflappy <= par.CCeu.y){                    //verificar se foi na cabeça
+            if(globais.flappybird.x + (globais.flappybird.largura - 10) >= par.x){                //Identificar se houve colisão
+                if(Cflappy <= par.CCeu.y -3){                    //verificar se foi na cabeça
                     return true;
                 }
-                if(Pflappy >= par.CPiso.y){                   //verificar se foi no pé
+                if(Pflappy >= par.CPiso.y +3){                   //verificar se foi no pé
                     return true;
                 }
                 
@@ -218,9 +218,9 @@ function criaPlacar(){
             }else if(globais.placar.pontos < 10){
                 return 'bronze';
             }else if(globais.placar.pontos < 15){
-                return 'prata'
+                return 'prata'; 
             }else{
-                return 'ouro'
+                return 'ouro';
             }
         },
 
