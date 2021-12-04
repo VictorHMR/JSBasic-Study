@@ -9,3 +9,7 @@ canvas{
     display: block;
     margin: 0 auto;
 }
+* {
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+}
