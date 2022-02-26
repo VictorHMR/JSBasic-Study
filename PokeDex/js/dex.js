@@ -1,49 +1,55 @@
 
-    var Ninicial;
-    var NFinal;
-    var regiao;
+ var Ninicial;
+ var NFinal;
+ var regiao;
+ var GNumber;
+ var url= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon";
+
 function fetchPokemon(geracao){
     const getPokemonUrl =  id =>`https://pokeapi.co/api/v2/pokemon/${id}`;
     const pokePromises = [];
-
 switch(geracao){
     case 1:  Ninicial = 1;
              NFinal= 151; 
              regiao= "Kanto";
-               break;
+             GNumber=1;
+    break;
     case 2:  Ninicial = 152;
              NFinal = 251;
              regiao= "Johto";
-                break;
+             GNumber= 2;
+    break;
     case 3:  Ninicial = 252;
              NFinal = 386;
              regiao= "Hoenn";
-                break;
+             GNumber=3;
+    break;
     case 4:  Ninicial = 387;
              NFinal = 494;
              regiao= "Sinnoh";
-
-                break;
+             GNumber=4;
+    break;
     case 5:  Ninicial = 495;
              NFinal = 649;
              regiao= "Unova";
-                break;
+             GNumber=5;
+
+    break;
     default: Ninicial = 1;
              NFinal = 649;
              regiao= "Pokedex(1-5gn)";
-                break;
+    break;
 }
     for(let i =Ninicial; i <= NFinal; i++){
         pokePromises.push(fetch(getPokemonUrl(i)).then(response => response.json()));
     }
-
     Promise.all(pokePromises)
     .then(pokemons =>{
         const liPoke = pokemons.reduce((accumulator, pokemon) =>{
             const types = pokemon.types.map(typeInfo => typeInfo.type.name)
             accumulator += `
                 <li class="card ${types[0]}">
-                <img class="card-image" alt="${pokemon.name}" width="50%" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png" />
+                <img class="card-image" alt="${pokemon.name}" width="50%" src="${url}/${pokemon.id}.png" />
                 <h2 class="card-title">${pokemon.id}. ${pokemon.name}</h2>
                 <p class="card-subtitle ">${types.join(' | ')}</p> 
                 </li>`;
@@ -57,4 +63,16 @@ switch(geracao){
 
 
 }
+
+function ShinyChange(){
+    if( $("#ShinyC").is(':checked') == true ){
+        url = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny"
+
+    }else if( $("#ShinyC").is(':checked') == false){
+        url = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon"
+    }
+    fetchPokemon(GNumber)
+}
 fetchPokemon();
+
+
