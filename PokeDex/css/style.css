@@ -145,6 +145,9 @@ h1 {
 .btnG{
 	margin-left: 10px;
 }
+.iconDex{
+	width: 50px;
+}
 
 @keyframes bounce {
 	20% {
