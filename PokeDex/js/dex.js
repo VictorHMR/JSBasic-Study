@@ -30,7 +30,7 @@ switch(geracao){
                 break;
     default: Ninicial = 1;
              NFinal = 649;
-             regiao= "Pokedex";
+             regiao= "Pokedex(1-5gn)";
                 break;
 }
     for(let i =Ninicial; i <= NFinal; i++){
