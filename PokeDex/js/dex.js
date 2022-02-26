@@ -1,11 +1,11 @@
 
-
-function fetchPokemon(geracao){
-    const getPokemonUrl =  id =>`https://pokeapi.co/api/v2/pokemon/${id}`;
-    const pokePromises = [];
     var Ninicial;
     var NFinal;
     var regiao;
+function fetchPokemon(geracao){
+    const getPokemonUrl =  id =>`https://pokeapi.co/api/v2/pokemon/${id}`;
+    const pokePromises = [];
+
 switch(geracao){
     case 1:  Ninicial = 1;
              NFinal= 151; 
