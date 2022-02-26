@@ -48,6 +48,7 @@ switch(geracao){
     default: Ninicial = 1;
              NFinal = 809;
              regiao= "Pokedex(1-5gn)";
+             GNumber=0;
     break;
     
 }
