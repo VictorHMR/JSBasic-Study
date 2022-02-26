@@ -35,10 +35,21 @@ switch(geracao){
              GNumber=5;
 
     break;
+    case 6: Ninicial = 650;
+            NFinal = 721;
+            regiao= "Kalos";
+            GNumber=6;
+    break;
+    case 7: Ninicial = 722;
+            NFinal = 809;
+            regiao= "Alola";
+            GNumber=7;
+    break;
     default: Ninicial = 1;
-             NFinal = 649;
+             NFinal = 809;
              regiao= "Pokedex(1-5gn)";
     break;
+    
 }
     for(let i =Ninicial; i <= NFinal; i++){
         pokePromises.push(fetch(getPokemonUrl(i)).then(response => response.json()));
