@@ -19,12 +19,13 @@ h1 {
 
 .pokedex {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 	grid-gap: 20px;
 	padding-inline-start: 0;
 }
 
 .card {
+	max-width: 250px;
 	width: fit-content;
 	list-style: none;
 	padding: 0 40px 0 40px;
@@ -167,10 +168,9 @@ h1 {
 	width: 50px;
 }
 
-.solo{
+.mult{
 	width: 250px;
-	margin-left: auto;
-	margin-right: auto;
+	margin-left: 50px;
 }
 .inputS{
 	margin-left: 10px;
