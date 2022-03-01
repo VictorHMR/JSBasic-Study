@@ -112,7 +112,7 @@ function searchPoke(){
             pokeP = pokemon.id+"."+ pokemon.name
             accumulator += `
                 <li class="card ${types[0]} solo" onclick="//changePoke('${pokemon.name}')">
-                <img class="card-image" alt="${pokemon.name}" width="50%" src="${url}/${pokemon.id}.png" />
+                <img class="card-image" alt="${pokemon.name}" width="50%" src="${urlm}/${pokemon.id}.png" />
                 <p class="card-subtitle"> ${types.join(' | ')}</p>
                 <p class="card-subtitle">`  
                 for(i=0; i < types.length;i++){
