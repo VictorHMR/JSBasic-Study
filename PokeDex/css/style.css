@@ -9,6 +9,7 @@ body {
 .container {
 	padding: 40px;
 	margin: 0 auto;
+	margin-top: 50px;
 }
 
 h1 {
@@ -24,12 +25,16 @@ h1 {
 }
 
 .card {
+	width: fit-content;
 	list-style: none;
 	padding: 0 40px 0 40px;
 	color: #222;
 	text-align: center;
 	border-radius: 10px;
 	position: relative;
+}
+.card:hover{
+	opacity: .6;
 }
 
 .card::after {
@@ -62,7 +67,6 @@ h1 {
 
 .grass {
 	background-color: #9BCC50;
-    color:#fff;
 }
 
 .electric {
@@ -114,7 +118,6 @@ h1 {
 
 .fighting {
 	background-color: #D56723;
-    color: white;
 }
 
 .normal {
@@ -128,8 +131,8 @@ h1 {
 .card-title {
 	text-transform: capitalize;
 	margin-bottom: 0px;
-	font-size: 16px;
-	font-weight: normal;
+	font-size: 19px;
+	font-weight: bolder;
 	position: relative;
 	z-index: 2;
 }
@@ -147,7 +150,11 @@ h1 {
 	position: relative;
 	z-index: 2;
 }
-
+.iconT{
+	width: 30px;
+	height: 30px;
+	margin-bottom: 10px;
+}
 .Geracoes{
 	display: flex;
 	justify-content: center;
@@ -160,6 +167,14 @@ h1 {
 	width: 50px;
 }
 
+.solo{
+	width: 250px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.inputS{
+	margin-left: 10px;
+}
 @keyframes bounce {
 	20% {
 			transform: translateY(-6px);
