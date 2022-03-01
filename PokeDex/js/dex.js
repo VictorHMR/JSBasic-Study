@@ -61,7 +61,7 @@ switch(geracao){
     break;
     
 }
-    for(let i =Ninicial; i <= NFinal; i++){
+    for(let i =Ninicial; i <= MP; i++){
         pokePromises.push(fetch(getPokemonUrl(i)).then(response => response.json()));
     }
     Promise.all(pokePromises)
