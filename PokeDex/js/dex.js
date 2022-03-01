@@ -1,19 +1,23 @@
 
  var Ninicial;
- var NFinal;
+ var NFinal = 100;
  var regiao;
  var GNumber;
  let pokeP;
  var contador = 0;
+ const MP = 809;
 const url= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon";
 var urlM = url;
-
-
-
 function fetchPokemon(geracao){
     const getPokemonUrl =  id =>`https://pokeapi.co/api/v2/pokemon/${id}`;
     const pokePromises = [];
+    $("#mais").hide();
 switch(geracao){
+    case 0:  Ninicial = 1;
+             regiao= "Pokedex(1-7gn)";
+             GNumber=0;
+             $("#mais").show();
+    break;
     case 1:  Ninicial = 1;
              NFinal= 151; 
              regiao= "Kanto";
@@ -38,7 +42,6 @@ switch(geracao){
              NFinal = 649;
              regiao= "Unova";
              GNumber=5;
-
     break;
     case 6: Ninicial = 650;
             NFinal = 721;
@@ -51,9 +54,10 @@ switch(geracao){
             GNumber=7;
     break;
     default: Ninicial = 1;
-             NFinal = 809;
+             NFinal = 100;
              regiao= "Pokedex(1-7gn)";
              GNumber=0;
+             $("#mais").show();
     break;
     
 }
@@ -82,7 +86,7 @@ switch(geracao){
         const ul = document.querySelector('[data-js="pokedex"]');
         $(ul).html(liPoke);
         $("#tituloP").html(regiao);
-        $("#aviso").html(NFinal - Ninicial +1 + " Resultados");
+        $("#aviso").html((NFinal - Ninicial +1) + " Resultados Exibidos");
         
     })
 
@@ -104,6 +108,7 @@ function ShinyChange(){
 }
 
 function searchPoke(){
+    $("#mais").hide();
     let value = $("#search").val().toLowerCase();
     if(value == ""){
         fetchPokemon(GNumber);
@@ -113,7 +118,7 @@ function searchPoke(){
     const pokePromises = [];
 
     if(isNaN(value)){
-        for(let i =Ninicial; i <= NFinal; i++){
+        for(let i =Ninicial; i <= MP; i++){
             pokePromises.push(fetch(getPokemonUrl(i)).then(response => response.json()));
         }
     }else{
@@ -177,6 +182,11 @@ function searchPoke(){
 function changePoke(poke){
     $("#search").val(poke);
     searchPoke();
+}
+
+function MorePoke(){
+    NFinal += 50;
+    fetchPokemon(0);
 }
 
 $("#search").on('keyup', function (event) {
