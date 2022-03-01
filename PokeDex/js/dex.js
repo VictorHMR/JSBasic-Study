@@ -141,7 +141,9 @@ function searchPoke(){
                     $("#aviso").html(contador + " Resultados");
                 }else{
                     pokeP = value
-                    $("#aviso").html("Sem Resultados");
+                    if(accumulator.length <= 0){
+                        $("#aviso").html("Sem Resultados");
+                    } 
                 }
             }else{
                 pokeP = value;
