@@ -118,7 +118,7 @@ function searchPoke(){
     const pokePromises = [];
 
     if(isNaN(value)){
-        for(let i =Ninicial; i <= MP; i++){
+        for(let i = 1 ; i <= MP; i++){
             pokePromises.push(fetch(getPokemonUrl(i)).then(response => response.json()));
         }
     }else{
