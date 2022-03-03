@@ -73,6 +73,7 @@ switch(geracao){
              regiao= "Pokedex(1-7gn)";
              GNumber=0;
              $("#mais").show();
+             $(".btn").attr('disabled', false);
     break;
     
 }
