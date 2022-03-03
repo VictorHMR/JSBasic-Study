@@ -22,36 +22,51 @@ switch(geracao){
              NFinal= 151; 
              regiao= "Kanto";
              GNumber=1;
+             $(".btn").attr('disabled', false);
+             $(".btnPurple").attr('disabled', true);
+
     break;
     case 2:  Ninicial = 152;
              NFinal = 251;
              regiao= "Johto";
              GNumber= 2;
+             $(".btn").attr('disabled', false);
+             $(".btnPink").attr('disabled', true);
     break;
     case 3:  Ninicial = 252;
              NFinal = 386;
              regiao= "Hoenn";
              GNumber=3;
+             $(".btn").attr('disabled', false);
+             $(".btnBabyPink").attr('disabled', true);
     break;
     case 4:  Ninicial = 387;
              NFinal = 494;
              regiao= "Sinnoh";
              GNumber=4;
+             $(".btn").attr('disabled', false);
+             $(".btnAqua").attr('disabled', true);
     break;
     case 5:  Ninicial = 495;
              NFinal = 649;
              regiao= "Unova";
              GNumber=5;
+             $(".btn").attr('disabled', false);
+             $(".btnGreen").attr('disabled', true);
     break;
     case 6: Ninicial = 650;
             NFinal = 721;
             regiao= "Kalos";
             GNumber=6;
+            $(".btn").attr('disabled', false);
+            $(".btnYellow").attr('disabled', true);
     break;
     case 7: Ninicial = 722;
             NFinal = 809;
             regiao= "Alola";
             GNumber=7;
+            $(".btn").attr('disabled', false);
+            $(".btnWhite").attr('disabled', true);
     break;
     default: Ninicial = 1;
              NFinal = 100;
@@ -178,7 +193,6 @@ function searchPoke(){
     })
     }
 }
-
 function changePoke(poke){
     $("#search").val(poke);
     searchPoke();

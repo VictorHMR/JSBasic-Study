@@ -1,0 +1,129 @@
+
+.btnBlue {
+  color: #3498db;
+  border-color: #3498db;
+  -webkit-transition: box-shadow 150ms ease-in-out, color 300ms ease-in-out;
+  transition: box-shadow 150ms ease-in-out, color 300ms ease-in-out;
+}
+.btnBlue:hover {
+    color: #fff;
+    box-shadow: 0 0 10px 4px #3498db;
+    background-color: #3498db;    
+}
+
+.btnPurple {
+    color: #9c43f0;
+    border-color: #9c43f0;
+    -webkit-transition: box-shadow 150ms ease-in-out, color 300ms ease-in-out;
+    transition: box-shadow 150ms ease-in-out, color 300ms ease-in-out;
+}
+.btnPurple:hover {
+    color: #fff;
+    box-shadow: 0 0 10px 4px #9c43f0;
+    background-color: #9c43f0;
+}
+.btnPurple:disabled{
+  color: #fff;
+  box-shadow: 0 0 10px 4px #9c43f0;
+  background-color: #9c43f0;
+}
+
+.btnPink {
+    color: #f888d6;
+    border-color: #f888d6;
+    -webkit-transition: box-shadow 150ms ease-in-out, color 300ms ease-in-out;
+    transition: box-shadow 150ms ease-in-out, color 300ms ease-in-out;
+ }
+.btnPink:hover {
+    color: #fff;
+    box-shadow: 0 0 10px 4px #f888d6;
+    background-color: #f888d6;
+}
+.btnPink:disabled{
+  color: #fff;
+  box-shadow: 0 0 10px 4px #f888d6;
+  background-color: #f888d6;
+}
+
+.btnAqua {
+    color: #0DCAF0;
+    border-color: #0DCAF0;
+    -webkit-transition: box-shadow 150ms ease-in-out, color 300ms ease-in-out;
+    transition: box-shadow 150ms ease-in-out, color 300ms ease-in-out;
+ }
+.btnAqua:hover {
+    color: #fff;
+    box-shadow: 0 0 10px 4px #0DCAF0;
+    background-color: #0DCAF0;
+}
+.btnAqua:disabled{
+  color: #fff;
+  box-shadow: 0 0 10px 4px #0DCAF0;
+  background-color: #0DCAF0;
+}
+  
+.btnGreen {
+    color: #0df0a4;
+    border-color: #0df0a4;
+    -webkit-transition: box-shadow 150ms ease-in-out, color 300ms ease-in-out;
+    transition: box-shadow 150ms ease-in-out, color 300ms ease-in-out;
+}
+.btnGreen:hover {
+    box-shadow: 0 0 10px 4px #0df0a4;
+    background-color: #0df0a4;
+}
+.btnGreen:disabled{
+  color: #000;
+  box-shadow: 0 0 10px 4px #0df0a4;
+  background-color: #0df0a4;
+}
+
+.btnYellow {
+  color: #fcff4d;
+  border-color: #fcff4d;
+  -webkit-transition: box-shadow 150ms ease-in-out, color 300ms ease-in-out;
+  transition: box-shadow 150ms ease-in-out, color 300ms ease-in-out;
+}
+.btnYellow:hover {
+  box-shadow: 0 0 10px 4px #fcff4d;
+  background-color: #fcff4d;
+}
+.btnYellow:disabled{
+  color: #000;
+  box-shadow: 0 0 10px 4px #fcff4d;
+  background-color: #fcff4d;
+}
+
+.btnWhite {
+  color: #ddfbfd;
+  border-color: #ddfbfd;
+  -webkit-transition: box-shadow 150ms ease-in-out, color 300ms ease-in-out;
+  transition: box-shadow 150ms ease-in-out, color 300ms ease-in-out;
+}
+.btnWhite:hover {
+  box-shadow: 0 0 10px 4px #ddfbfd;
+  background-color: #ddfbfd;
+}
+.btnWhite:disabled{
+  color: #000;
+  box-shadow: 0 0 10px 4px #ddfbfd;
+  background-color: #ddfbfd;
+}
+
+.btnBabyPink {
+  color: #f5a9cc;
+  border-color: #f5a9cc;
+  -webkit-transition: box-shadow 150ms ease-in-out, color 300ms ease-in-out;
+  transition: box-shadow 150ms ease-in-out, color 300ms ease-in-out;
+}
+.btnBabyPink:hover {
+  box-shadow: 0 0 10px 4px #f5a9cc;
+  background-color: #f5a9cc;
+}
+.btnBabyPink:disabled{
+  color: white;
+  box-shadow: 0 0 10px 4px #f5a9cc;
+  background-color: #f5a9cc;
+}
+
+/*, Amarelow, rosa forte, branco gelo*/
