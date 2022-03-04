@@ -5,9 +5,11 @@
  var GNumber;
  let pokeP;
  var contador = 0;
+ var Ftype;
  const MP = 809;
 const url= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon";
 var urlM = url;
+
 function fetchPokemon(geracao){
     const getPokemonUrl =  id =>`https://pokeapi.co/api/v2/pokemon/${id}`;
     const pokePromises = [];
@@ -74,6 +76,7 @@ switch(geracao){
              GNumber=0;
              $("#mais").show();
              $(".btn").attr('disabled', false);
+
     break;
     
 }
@@ -115,6 +118,10 @@ function ShinyChange(){
 
     }else if( $("#ShinyC").is(':checked') == false){
         urlM = url;
+    }
+    if(Ftype != ''){
+        searchType(Ftype);
+        return;
     }
     if($("#search").val() == ""){
         fetchPokemon(GNumber)
@@ -194,14 +201,61 @@ function searchPoke(){
     })
     }
 }
+
+function searchType(tipo){
+    $("#mais").hide();
+    Ftype = tipo;
+    const getPokemonUrl =  id =>`https://pokeapi.co/api/v2/pokemon/${id}`;
+    const pokePromises = [];
+
+    for(let i = 1 ; i <= MP; i++){
+        pokePromises.push(fetch(getPokemonUrl(i)).then(response => response.json()));
+    }
+    
+    Promise.all(pokePromises)
+    .then(pokemons =>{
+        const liPoke = pokemons.reduce((accumulator, pokemon) =>{
+            const types = pokemon.types.map(typeInfo => typeInfo.type.name)
+
+                if(types[0] == tipo || types[1] == tipo){
+                    contador++;
+                    pokeP = tipo;
+                    accumulator += `
+                        <li class="card ${types[0]}" onclick="//changePoke('${pokemon.name}')">
+                        <img class="card-image" alt="${pokemon.name}" width="50%" src="${urlM}/${pokemon.id}.png" />
+                        <h2 class="card-title">${pokemon.id}. ${pokemon.name}</h2>
+                        <p class="card-subtitle"> ${types.join(' | ')}</p>
+                        <p class="card-subtitle">`  
+                        for(i=0; i < types.length;i++){
+                            accumulator += `<img class="iconT" src="img/elements/${types[i]}.ico">`
+                        } 
+                    accumulator += `</p></li>`
+                    $("#aviso").html(contador + " Resultados");
+                }
+            return accumulator
+        }, '')
+        const ul = document.querySelector('[data-js="pokedex"]');
+        $(ul).html(liPoke);
+        $("#tituloP").html(pokeP);
+        contador= 0;
+
+    })
+}
+
 function changePoke(poke){
     $("#search").val(poke);
     searchPoke();
 }
 
 function MorePoke(){
-    NFinal += 50;
-    fetchPokemon(0);
+    if(NFinal >= MP){
+        $("#mais").hide();
+        NFinal = MP;
+        fetchPokemon(0);
+    }else{
+        NFinal += 50;
+        fetchPokemon(0);
+    }
 }
 
 $("#search").on('keyup', function (event) {
