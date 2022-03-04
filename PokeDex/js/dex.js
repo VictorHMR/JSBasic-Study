@@ -134,6 +134,7 @@ function ShinyChange(){
 function searchPoke(){
     $("#mais").hide();
     let value = $("#search").val().toLowerCase();
+    Ftype = '';
     if(value == ""){
         fetchPokemon(GNumber);
     }
@@ -205,6 +206,7 @@ function searchPoke(){
 
 function searchType(tipo){
     $("#mais").hide();
+    $("#search").val('');
     $(".btn").attr('disabled', false);
     Ftype = tipo;
     const getPokemonUrl =  id =>`https://pokeapi.co/api/v2/pokemon/${id}`;
@@ -244,6 +246,7 @@ function searchType(tipo){
 }
 
 function changePoke(poke){
+    Ftype = '';
     $("#search").val(poke);
     searchPoke();
 }
