@@ -121,6 +121,7 @@ function ShinyChange(){
     }
     if(Ftype != ''){
         searchType(Ftype);
+        Ftype = '';
         return;
     }
     if($("#search").val() == ""){
