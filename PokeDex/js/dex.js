@@ -14,6 +14,7 @@ function fetchPokemon(geracao){
     const getPokemonUrl =  id =>`https://pokeapi.co/api/v2/pokemon/${id}`;
     const pokePromises = [];
     $("#mais").hide();
+    Ftype = '';
 switch(geracao){
     case 0:  Ninicial = 1;
              regiao= "Pokedex(1-7gn)";
@@ -121,7 +122,6 @@ function ShinyChange(){
     }
     if(Ftype != ''){
         searchType(Ftype);
-        Ftype = '';
         return;
     }
     if($("#search").val() == ""){
@@ -205,10 +205,10 @@ function searchPoke(){
 
 function searchType(tipo){
     $("#mais").hide();
+    $(".btn").attr('disabled', false);
     Ftype = tipo;
     const getPokemonUrl =  id =>`https://pokeapi.co/api/v2/pokemon/${id}`;
     const pokePromises = [];
-
     for(let i = 1 ; i <= MP; i++){
         pokePromises.push(fetch(getPokemonUrl(i)).then(response => response.json()));
     }
