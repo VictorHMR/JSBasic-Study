@@ -1,0 +1,122 @@
+canvas{
+   border: 1px solid #000;
+   display: block;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 0;
+    background-color: #333;
+}
+*{
+    font-family: 'Press Start 2P';
+}
+
+/*----------------------------------------Nav-----------------------------------------------*/
+.navbar{
+    margin-top: 1%;
+    width: 80vw;
+    max-width: 800px;
+    display: flex;
+    position: fixed;
+    top: 0;
+    justify-content: center;
+    border: 2px solid black;
+    border-radius: 50px;
+    background-color: rgb(177, 108, 108);
+    z-index: 0;
+    height: 36px;
+}
+
+.navbar ul{
+margin: 0 ;
+padding: 0;
+}
+.navbar a {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 13px;
+    float: left;
+    padding: 13px 15px 10px 15px;
+}
+.navbar a:hover{
+    background-color: rgb(124, 76, 76);
+}
+
+
+/*----------------------------------------Modal-----------------------------------------------*/
+.modal{
+    background-color: rgba(0, 0, 0, 0.808);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+}
+.modal-content{
+    margin: 0 auto;
+    box-shadow: 0 0 2px #fff;
+    max-width: 600px;
+    margin-top: 3%;
+}
+
+.modal-header, .modal-body, .modal-footer{
+    padding: 10px;
+}
+.modal-header{
+    background-color: rgb(177, 108, 108);
+    text-align: center;
+}
+.modal-header button{
+    display: block;
+    margin-left: auto;
+    background-color: transparent;
+}
+.modal-header button:hover{
+    background-color: rgba(121, 121, 121, 0.979);
+}
+.modal-footer{
+    background-color: rgb(177, 108, 108);
+    text-align: center;
+}
+.modal-body{
+    background-color: rgba(255, 255, 255, 0.637);
+    padding: 10px 40px 10px 40px ;
+
+}
+.modal-body p{
+    font-size: 0.7rem;
+    text-align: left;
+}
+.modal-body h4{
+    margin-bottom:  10px;
+}
+
+/*---------------------------------------------------------------------------------------*/
+
+
+.paiProj{
+display: flex;
+justify-content: space-around;
+flex-wrap: wrap;
+}
+
+.filho{
+display: flex;
+margin-bottom: 20px;
+padding: 5px 10px 5px 10px;
+}
+.filho:hover{
+    background-color: rgba(0, 0, 0, 0.123);
+
+}
+
+.filho a{
+    text-decoration: none;
+}
