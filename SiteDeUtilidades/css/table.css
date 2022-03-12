@@ -1,0 +1,32 @@
+.Title {
+  margin-top: 15vh;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.tableCep {
+  border-collapse: collapse;
+}
+.tableCep th {
+  text-align: left;
+}
+.tableCep td,
+.tableCep th {
+  border-bottom: 1px solid wheat;
+  padding-bottom: 2px;
+}
+.tableCep td {
+  padding-left: 50px;
+}
+.cep {
+  display: grid;
+  max-width: 350px;
+  justify-content: center;
+  margin: auto;
+}
+.consultar{
+    margin-top: 3vh;
+    text-align: center;
+}
+#erro{
+    color: red;
+}

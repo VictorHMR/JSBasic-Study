@@ -1,0 +1,12 @@
+.ConvertBox{
+    display: grid;
+    width: 300px;
+    margin: auto;
+    margin-top: 20vh;
+}
+.NumBox th{
+    text-align: left;
+}
+.NumBox th, .NumBox tr{
+    padding-bottom: 10px;
+}

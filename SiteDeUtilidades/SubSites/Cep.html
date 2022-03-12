@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,300&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <title>Consultar Cep</title>
+    <link rel="stylesheet" href="../css/Nav.css">
+    <link rel="stylesheet" href="../css/Global.css">
+    <link rel="stylesheet" href="../css/inputs.css">
+    <link rel="stylesheet" href="../css/table.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a class="logo" href="">Consultar Cep</a>
+      <div class="mobile-menu">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+      <ul class="nav-list">
+        <li><a class="btn" href="../index.html">Voltar</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+<div class="cep">
+
+  <div class="Title">
+    <h3 id="cepm">CEP</h3>
+    
+  </div>
+    <table class="tableCep">
+          <tbody>
+            <tr>
+              <th>UF:</th>
+              <td id="uf"></td>
+            </tr>
+            <tr>
+              <th>Cidade:</th>
+              <td id="cidade"></td>
+            </tr>
+            <tr>
+              <th>Bairro:</th>
+              <td id="bairro"></td>
+            </tr>
+            <tr>
+              <th>Logradouro:</th>
+              <td id="logradouro"></td>
+            </tr>
+          </tbody>
+    </table>
+    <div class="consultar">
+    
+      <input class="input" type="search" placeholder="CEP"  id="cep" autocomplete="off" maxlength="9">
+      <button class="btn btnBlue" onclick="ConsultarCep()">Consultar</button>
+      <h3 id="erro"></h3>
+      </div>
+    
+</div>
+
+
+<script type="text/javascript" src="../js/Jquery.min.js"></script>
+<script type="text/javascript" src="../js/cep.js"></script>
+<script src="../js/responsividade.js"></script>
+</body>
+</html>

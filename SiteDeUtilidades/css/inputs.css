@@ -1,0 +1,46 @@
+.btn {
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  border: 1px solid transparent;
+  padding: 2px 2px;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-ou;
+}
+
+.btnBlue {
+  color: #3498db;
+  background-color: transparent;
+  border-color: #3498db;
+  -webkit-transition: box-shadow 150ms ease-in-out, color 300ms ease-in-out;
+  transition: box-shadow 150ms ease-in-out, color 300ms ease-in-out;
+}
+.btnBlue:hover {
+  color: #fff;
+  box-shadow: 0 0 10px 4px #3498db;
+  background-color: #3498db;
+}
+.input {
+  padding: 2px 2px;
+  color: black;
+  position:sticky;
+  text-decoration: none;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+input:disabled{
+  color: #fff;
+}
+#dec, #bun, #hex, #oct {
+color: black;
+}
