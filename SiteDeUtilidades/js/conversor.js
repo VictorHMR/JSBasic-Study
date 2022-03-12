@@ -61,6 +61,7 @@ $(".RadioButton").on("click", function (event) {
 });
 
 $(".input").on("keyup", function (event) {
+
   switch (event.target.id) {
     case "numDec":
       Dec = parseInt($("#numDec").val());
@@ -102,6 +103,8 @@ $(".input").on("keyup", function (event) {
     if (number < 0)
     {
       number = 0xFFFFFFFF + number + 1;
+    }else if(isNaN(number) == true){
+      return '';
     }
   
     return number.toString(16).toUpperCase();
