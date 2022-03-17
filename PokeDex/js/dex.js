@@ -90,7 +90,7 @@ switch(geracao){
             const types = pokemon.types.map(typeInfo => typeInfo.type.name)
             
             accumulator += `
-                <li class="card ${types[0]}" onclick="//changePoke('${pokemon.name}')">
+                <li class="card ${types[0]}" onclick="//changePoke('${pokemon.name}')" id="${pokemon.name}">
                 <img class="card-image" alt="${pokemon.name}" width="50%" src="${urlM}/${pokemon.id}.png" />
                 <h2 class="card-title">${pokemon.id}. ${pokemon.name}</h2>
                 <p class="card-subtitle"> ${types.join(' | ')}</p>
@@ -197,7 +197,7 @@ function searchPoke(){
         }, '')
         const ul = document.querySelector('[data-js="pokedex"]');
         $(ul).html(liPoke);
-        $("#tituloP").html(pokeP);
+        $("#tituloP").html(pokeP[0].toUpperCase() + pokeP.slice(1));
         contador= 0;
 
     })
@@ -239,7 +239,7 @@ function searchType(tipo){
         }, '')
         const ul = document.querySelector('[data-js="pokedex"]');
         $(ul).html(liPoke);
-        $("#tituloP").html(pokeP);
+        $("#tituloP").html(pokeP[0].toUpperCase() + pokeP.slice(1));
         contador= 0;
 
     })
