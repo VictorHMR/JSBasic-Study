@@ -1,0 +1,127 @@
+.containerPoke{
+	justify-content: center;
+	width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.562);
+    position: fixed;
+    z-index: 99;
+    display: none;
+}
+.FecharX{
+position: absolute;
+right: 30px;
+text-decoration: none;
+color: black;
+
+}
+.modalPoke{
+	position: absolute;
+	top: 60px;
+	width: 500px;
+	height: 80vh;
+	z-index: 99;
+	border-radius: 10px;
+    padding: 23px;
+    opacity: 1;
+}
+.ModalImage{
+    width: 220px;
+    margin: 40px auto 0 auto;
+    margin-left: auto;
+    margin-right: auto;
+    background-color:rgb(83, 82, 82);
+    border-radius: 50%;
+}
+.ModalImage img{
+    width: 100%;
+}
+
+.modal-title{
+    text-transform: capitalize;
+	margin-bottom: 0px;
+    text-align: center;
+	font-size: 39px;
+	font-weight: bolder;
+	position: relative;
+}
+.atributos{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    padding: 20px;
+    margin-top: 2px;
+	font-weight: lighter;
+    text-align: center;
+	position: relative;
+    color:aliceblue;
+    background-color:rgba(83, 82, 82, 0.493);
+    border-radius: 10px;
+}
+.atributos p{
+    color: black;
+}
+
+
+@media(max-width:999px) {
+  
+    .FecharX{
+    position: absolute;
+    right: 30px;
+    text-decoration: none;
+    color: black;
+    font-size: 60px;
+    width: 60px;
+    
+    }
+    .modalPoke{
+        position: absolute;
+        top: 160px;
+        width: 90vw;
+        height: 80vh;
+        z-index: 99;
+        border-radius: 10px;
+        padding: 23px;
+        opacity: 1;
+    }
+    
+    .modalPoke h5{
+        font-size: 60px;
+    }
+    .valor{
+        font-size: 40px;
+    }
+    .ModalImage{
+        width: 500px;
+        margin: 40px auto 0 auto;
+        margin-left: auto;
+        margin-right: auto;
+        background-color:rgb(83, 82, 82);
+        border-radius: 50%;
+    }
+    .ModalImage img{
+        width: 100%;
+    }
+    
+    .modal-title{
+        text-transform: capitalize;
+        margin-bottom: 0px;
+        text-align: center;
+        font-size: 90px;
+        font-weight: bolder;
+        position: relative;
+    }
+    .atributos{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-template-rows: minmax(20px, 200px);
+        padding: 20px;
+        margin-top: 2px;
+        height: 970px;
+        font-weight: lighter;
+        text-align: center;
+        position: relative;
+        color:aliceblue;
+        background-color:rgba(83, 82, 82, 0.493);
+        border-radius: 10px;
+    }
+    
+}

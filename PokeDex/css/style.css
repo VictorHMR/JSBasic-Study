@@ -180,6 +180,8 @@ h1 {
 .inputS{
 	margin-left: 10px;
 }
+
+
 @keyframes bounce {
 	20% {
 			transform: translateY(-6px);
@@ -194,4 +196,69 @@ h1 {
 	100% {
 			transform: translateY(0);
 	}
+}
+
+@media(max-width:999px){
+	
+.container {
+	padding: 40px;
+	margin: 0 auto;
+	margin-top: 100px;
+}
+	
+.pokedex {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	padding-inline-start: 0;
+	grid-gap: 20px;
+}
+.card {
+	max-width: 500px;
+	width: fit-content;
+	list-style: none;
+	padding: 0 30px 0 30px;
+	color: #222;
+	text-align: center;
+	border-radius: 10px;
+	position: relative;
+}
+.card::after {
+	content: "";
+  display: block;
+  width: 50%;
+  height: 45%;
+  border-radius: 100%;
+  background-color: rgb(80, 80, 80);
+  opacity: .7;
+  position: absolute;
+  top: 10%;
+  left: 25%;
+}
+.card-image {
+	height: 250px;
+	width: 250px;
+	position: relative;
+	z-index: 2;
+}
+.iconT{
+	width: 40px;
+	height: 40px;
+	margin-bottom: 10px;
+}
+.card-title {
+	text-transform: capitalize;
+	margin-bottom: 0px;
+	font-size: 35px;
+	font-weight: bolder;
+	position: relative;
+	z-index: 2;
+}
+
+.card-subtitle {
+	margin-top: 2px;
+	font-size: 25px;
+	font-weight: lighter;
+	position: relative;
+	z-index: 2;
+}
 }

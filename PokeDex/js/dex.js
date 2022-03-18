@@ -14,6 +14,7 @@ function fetchPokemon(geracao){
     const getPokemonUrl =  id =>`https://pokeapi.co/api/v2/pokemon/${id}`;
     const pokePromises = [];
     $("#mais").hide();
+    fecharMod();
     Ftype = '';
 switch(geracao){
     case 0:  Ninicial = 1;
@@ -90,7 +91,7 @@ switch(geracao){
             const types = pokemon.types.map(typeInfo => typeInfo.type.name)
             
             accumulator += `
-                <li class="card ${types[0]}" onclick="//changePoke('${pokemon.name}')" id="${pokemon.name}">
+                <li class="card ${types[0]}" onclick="PokeModal('${pokemon.id}')" id="${pokemon.name}">
                 <img class="card-image" alt="${pokemon.name}" width="50%" src="${urlM}/${pokemon.id}.png" />
                 <h2 class="card-title">${pokemon.id}. ${pokemon.name}</h2>
                 <p class="card-subtitle"> ${types.join(' | ')}</p>
@@ -135,6 +136,7 @@ function searchPoke(){
     $("#mais").hide();
     let value = $("#search").val().toLowerCase();
     Ftype = '';
+    fecharMod();
     if(value == ""){
         fetchPokemon(GNumber);
     }
@@ -159,7 +161,7 @@ function searchPoke(){
                     contador++;
                     pokeP = value;
                     accumulator += `
-                        <li class="card ${types[0]}" onclick="//changePoke('${pokemon.name}')">
+                        <li class="card ${types[0]}" onclick="PokeModal('${pokemon.id}')">
                         <img class="card-image" alt="${pokemon.name}" width="50%" src="${urlM}/${pokemon.id}.png" />
                         <h2 class="card-title">${pokemon.id}. ${pokemon.name}</h2>
                         <p class="card-subtitle"> ${types.join(' | ')}</p>
@@ -179,7 +181,7 @@ function searchPoke(){
                 pokeP = value;
                 contador = 1;
                 accumulator += `
-                    <li class="card ${types[0]} solo" onclick="//changePoke('${pokemon.name}')">
+                    <li class="card ${types[0]} solo" onclick="PokeModal('${pokemon.id}')">
                     <img class="card-image" alt="${pokemon.name}" width="50%" src="${urlM}/${pokemon.id}.png" />
                     <h2 class="card-title">${pokemon.id}. ${pokemon.name}</h2>
                     <p class="card-subtitle"> ${types.join(' | ')}</p>
@@ -209,6 +211,7 @@ function searchType(tipo){
     $("#search").val('');
     $(".btn").attr('disabled', false);
     Ftype = tipo;
+    fecharMod();
     const getPokemonUrl =  id =>`https://pokeapi.co/api/v2/pokemon/${id}`;
     const pokePromises = [];
     for(let i = 1 ; i <= MP; i++){
@@ -224,7 +227,7 @@ function searchType(tipo){
                     contador++;
                     pokeP = tipo;
                     accumulator += `
-                        <li class="card ${types[0]}" onclick="//changePoke('${pokemon.name}')">
+                        <li class="card ${types[0]}" onclick="PokeModal('${pokemon.id}')">
                         <img class="card-image" alt="${pokemon.name}" width="50%" src="${urlM}/${pokemon.id}.png" />
                         <h2 class="card-title">${pokemon.id}. ${pokemon.name}</h2>
                         <p class="card-subtitle"> ${types.join(' | ')}</p>
@@ -245,12 +248,6 @@ function searchType(tipo){
     })
 }
 
-function changePoke(poke){
-    Ftype = '';
-    $("#search").val(poke);
-    searchPoke();
-}
-
 function MorePoke(){
     if(NFinal >= MP){
         $("#mais").hide();
@@ -261,6 +258,61 @@ function MorePoke(){
         fetchPokemon(0);
     }
 }
+
+function PokeModal(number){
+    const getPokemonUrl =  id =>`https://pokeapi.co/api/v2/pokemon/${id}`;
+    const pokePromises = [];
+        pokePromises.push(fetch(getPokemonUrl(number)).then(response => response.json()));
+        
+    Promise.all(pokePromises)
+    .then(pokemons =>{
+        const MdPoke = pokemons.reduce((accumulator, pokemon) =>{
+            const types = pokemon.types.map(typeInfo => typeInfo.type.name)
+
+                    accumulator += ` <div class="modalPoke ${types[0]}">
+                    <button onclick="fecharMod()" class="FecharX">X</button>
+                    <div class="ModalImage">
+                      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png" alt="">
+                    </div>
+                    <h2 class="modal-title">${pokemon.id}.${pokemon.name} </h2>
+                    <div class="atributos">
+                      <div>
+                        <h5>Height:</h5>
+                        <p class="valor">${pokemon.height / 10 + " m"}</p>
+                      </div>
+                      <div>
+                        <h5>Weight:</h5>
+                        <p class="valor">${pokemon.weight/ 10 + " kg"}</p>
+                      </div>
+                      <div>
+                        <h5>Abilities:</h5>
+                        <p class="valor">-${pokemon.abilities.map(ab => ab.ability.name).join('<br>-')}</p>
+                      </div>
+                      <div>
+                        <h5>Type:</h5>
+                        <p class="valor">${types.join(" | ")}</p>
+                      </div>
+                      
+                    </div>
+                </div>`
+                
+            return accumulator
+        }, '')
+        
+$(".containerPoke").css("display", 'Flex')
+const ul = document.querySelector('[data-js="pokemodal"]');
+$(ul).html(MdPoke);
+
+    })
+
+
+}
+
+function fecharMod(){
+    $(".containerPoke").css("display", 'none')
+};
+
+
 
 $("#search").on('keyup', function (event) {
     if (event.keyCode !== 13) return;
@@ -274,6 +326,9 @@ $(".btnG").on('click', function(){
     $('html, body').animate({scrollTop:0}, 'fast');
     $("#search").val('');
 });
+
+
+
 
 fetchPokemon();
 
