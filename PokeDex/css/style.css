@@ -8,7 +8,7 @@ body {
 
 .container {
   margin: 0 auto;
-  padding: 50px 70px 0 70px;
+  padding: 50px 90px 0 90px;
 }
 
 h1 {
@@ -19,7 +19,7 @@ h1 {
 
 .pokedex {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: 20px;
   padding-inline-start: 0;
 }
@@ -27,7 +27,7 @@ h1 {
 .card {
   max-width: 250px;
   list-style: none;
-  padding: 0 40px 0 40px;
+  padding: 0 60px 0 60px;
   color: #222;
   border: #222 solid 1px;
   text-align: center;
@@ -144,7 +144,7 @@ h1 {
 }
 
 .card-image {
-  width: 130px;
+  width: 150px;
   position: relative;
   margin-bottom: 10px;
   z-index: 2;
