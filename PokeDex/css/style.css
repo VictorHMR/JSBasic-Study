@@ -8,12 +8,13 @@ body {
 
 .container {
   margin: 0 auto;
-  padding: 50px 150px 0 150px;
+  padding: 50px 80px 0 80px;
 }
 
 h1 {
   text-align: center;
   font-size: 54px;
+  font-weight: normal;
 }
 
 .pokedex {
@@ -24,8 +25,7 @@ h1 {
 }
 
 .card {
-  max-width: 250px;
-  width: fit-content;
+  border: #222 solid 1px;
   list-style: none;
   padding: 0 40px 0 40px;
   color: #222;
@@ -129,20 +129,20 @@ h1 {
   text-transform: capitalize;
   margin-bottom: 0px;
   font-size: 19px;
-  font-weight: bolder;
+  font-weight: bold;
   position: relative;
   z-index: 2;
 }
 
 .card-subtitle {
   margin-top: 2px;
-  font-weight: lighter;
+  font-weight: bold;
   position: relative;
   z-index: 2;
 }
 
 .card-image {
-  height: 180px;
+  height: 160px;
   width: 100%;
   position: relative;
   z-index: 2;

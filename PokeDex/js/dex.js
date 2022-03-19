@@ -302,7 +302,7 @@ function PokeModal(number){
 $(".containerPoke").css("display", 'Flex')
 const ul = document.querySelector('[data-js="pokemodal"]');
 $(ul).html(MdPoke);
-
+$("html,body").css({"overflow":"hidden"});
     })
 
 
@@ -310,6 +310,7 @@ $(ul).html(MdPoke);
 
 function fecharMod(){
     $(".containerPoke").css("display", 'none')
+    $("html,body").css({"overflow":"auto"});
 };
 
 
