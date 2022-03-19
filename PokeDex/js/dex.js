@@ -323,7 +323,7 @@ $("#search").on('keyup', function (event) {
     contador = 0;
 });
 
-$(".btnG").on('click', function(){
+$(".btn").on('click', function(){
     $('html, body').animate({scrollTop:0}, 'fast');
     $("#search").val('');
 });
