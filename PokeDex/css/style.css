@@ -43,11 +43,11 @@ h1 {
   display: block;
   width: 50%;
   height: 45%;
-  border-radius: 100%;
+  border-radius: 50%;
   background-color: rgb(80, 80, 80);
   opacity: 0.7;
   position: absolute;
-  top: 15%;
+  top: 10%;
   left: 25%;
 }
 .dark {
@@ -131,21 +131,22 @@ h1 {
   margin-bottom: 0px;
   font-size: 19px;
   font-weight: bold;
+  display: block;
   position: relative;
   z-index: 2;
 }
 
 .card-subtitle {
   margin-top: 2px;
-  font-weight: bold;
+  font-weight: lighter;
   position: relative;
   z-index: 2;
 }
 
 .card-image {
-  height: 180px;
-  width: 100%;
+  width: 130px;
   position: relative;
+  margin-bottom: 10px;
   z-index: 2;
 }
 .iconT {
