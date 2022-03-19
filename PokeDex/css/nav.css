@@ -9,12 +9,12 @@
     width: 100vw;
     z-index: 99;
   }
-  a {
+  header a {
     color: #fff;
     text-decoration: none;
     transition: 0.3s;
   }
-  a:hover {
+  header a:hover {
     opacity: 0.3;
   }
   .logo {
@@ -28,7 +28,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background: #331632;
+    background: #551e1e;
     height: 8vh;
   }
   .nav-list {
@@ -39,7 +39,7 @@
   }
   .nav-list li {
     letter-spacing: 3px;
-    margin-left: 32px;
+    margin-left: 12px;
   }
   /*--------------------------------------Mobile-------------------------------------------*/
   .mobile-menu {
@@ -47,14 +47,17 @@
     cursor: pointer;
   }
   .mobile-menu div {
-    width: 32px;
-    height: 2px;
+    width: 52px;
+    height: 8px;
     background: #fff;
     margin: 8px;
   }
   
   @media(max-width: 999px){
     
+  .btn{
+    font-size: 60px;
+  }
       body{
           overflow-x: hidden;
       }
@@ -67,11 +70,12 @@
           background: #23232e;
           flex-direction: column;
           align-items: center;
-          justify-content: space-around;
+          padding-top: 5%;
           transform: translateX(100%);
           transition: transform .3s ease-in;
       }
       .nav-list li{
+        margin-top: 20px;
         margin-left: 0;  
         opacity: 0;
       }
