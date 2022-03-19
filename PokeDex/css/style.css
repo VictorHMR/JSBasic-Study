@@ -7,8 +7,9 @@ body {
 }
 
 .container {
+	padding: 40px;
 	margin: 0 auto;
-	padding: 50px 150px 0 150px;
+	margin-top: 50px;
 }
 
 h1 {
@@ -178,11 +179,9 @@ h1 {
 }
 .inputS{
 	margin-left: 10px;
-	margin-top: 15px;
 }
-#aviso{
-	font-size: small;
-}
+
+
 @keyframes bounce {
 	20% {
 			transform: translateY(-6px);
@@ -201,22 +200,23 @@ h1 {
 
 @media(max-width:999px){
 	
-	.container {
-		margin: 0 auto;
-		margin-top: 150px;
-		padding: 50px 100px 0 100px;
-	}
-
+.container {
+	padding: 40px;
+	margin: 0 auto;
+	margin-top: 100px;
+}
+	
 .pokedex {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 	padding-inline-start: 0;
+	grid-gap: 20px;
 }
 .card {
-	width: 500px;
+	max-width: 500px;
 	width: fit-content;
 	list-style: none;
-	padding: 0 70px 0 70px;
+	padding: 0 30px 0 30px;
 	color: #222;
 	text-align: center;
 	border-radius: 10px;

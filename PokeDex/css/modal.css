@@ -16,8 +16,9 @@ color: black;
 }
 .modalPoke{
 	position: absolute;
-    top: 5%;
+	top: 60px;
 	width: 500px;
+	height: 80vh;
 	z-index: 99;
 	border-radius: 10px;
     padding: 23px;
@@ -43,14 +44,14 @@ color: black;
 	font-weight: bolder;
 	position: relative;
 }
-
 .atributos{
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    padding: 5px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    padding: 20px;
     margin-top: 2px;
 	font-weight: lighter;
     text-align: center;
+	position: relative;
     color:aliceblue;
     background-color:rgba(83, 82, 82, 0.493);
     border-radius: 10px;
@@ -58,10 +59,6 @@ color: black;
 .atributos p{
     color: black;
 }
-.atributos h5{
-    font-size:1.2rem;
-}
-
 
 
 @media(max-width:999px) {

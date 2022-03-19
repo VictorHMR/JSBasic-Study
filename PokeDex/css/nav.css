@@ -9,12 +9,12 @@
     width: 100vw;
     z-index: 99;
   }
-  header a {
+  a {
     color: #fff;
     text-decoration: none;
     transition: 0.3s;
   }
-  header a:hover {
+  a:hover {
     opacity: 0.3;
   }
   .logo {
@@ -39,7 +39,7 @@
   }
   .nav-list li {
     letter-spacing: 3px;
-    margin-left: 12px;
+    margin-left: 32px;
   }
   /*--------------------------------------Mobile-------------------------------------------*/
   .mobile-menu {
@@ -54,9 +54,7 @@
   }
   
   @media(max-width: 999px){
-      .btn{
-        font-size: 300%;
-      }
+    
       body{
           overflow-x: hidden;
       }
@@ -69,12 +67,11 @@
           background: #23232e;
           flex-direction: column;
           align-items: center;
-          padding-top: 5%;
+          justify-content: space-around;
           transform: translateX(100%);
           transition: transform .3s ease-in;
       }
       .nav-list li{
-        margin-top: 20px;
         margin-left: 0;  
         opacity: 0;
       }
