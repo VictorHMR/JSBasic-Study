@@ -261,48 +261,33 @@ function MorePoke(){
 
 function PokeModal(number){
     const getPokemonUrl =  id =>`https://pokeapi.co/api/v2/pokemon/${id}`;
-    const pokePromises = [];
-        pokePromises.push(fetch(getPokemonUrl(number)).then(response => response.json()));
-        
+    const pokePromises = [];    
+    pokePromises.push(fetch(getPokemonUrl(number)).then(response => response.json()));
     Promise.all(pokePromises)
     .then(pokemons =>{
         const MdPoke = pokemons.reduce((accumulator, pokemon) =>{
-            const types = pokemon.types.map(typeInfo => typeInfo.type.name)
+            const types = pokemon.types.map(typeInfo => typeInfo.type.name);
+            const statsV = pokemon.stats.map(statsInfo => statsInfo.base_stat);
+            const abilities = pokemon.abilities.map(abilityInfo => abilityInfo.ability.name)
+            /*Definindo a Cor*/$('.modalPoke').attr('class', `modalPoke ${types[0]}`);
+            /*Imagem do Poke*/ $("#modalImg").attr('src', `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png`);
+           /*Id + Nome no Titulo*/ $('#modalName').html( pokemon.id +"."+ pokemon.name);
+           /*Definindo a Altura + */ $("#alturaP").html(`${pokemon.height / 10 + " m"}`);
+           /*Definindo o Peso*/ $("#pesoP").html(`${pokemon.weight / 10 + " kg"}`);
+           /*Definindo as Habilidades*/$("#habilidadesP").html(`-${abilities.join('<br>-')}`);
+           /*Definindo os Tipos */$("#tiposP").html(`${types.join(" | ")}`)
+            $("#hpP").html(`${statsV[0]}`)
+            $("#attackP").html(`${statsV[1]}`)
+            $("#defenseP").html(`${statsV[2]}`)
+            $("#attackSP").html(`${statsV[3]}`)
+            $("#defenseSP").html(`${statsV[4]}`)
+            $("#speedP").html(`${statsV[5]}`)
 
-                    accumulator += ` <div class="modalPoke ${types[0]}">
-                    <button onclick="fecharMod()" class="FecharX">X</button>
-                    <div class="ModalImage">
-                      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png" alt="">
-                    </div>
-                    <h2 class="modal-title">${pokemon.id}.${pokemon.name} </h2>
-                    <div class="atributos">
-                      <div>
-                        <h5>Height:</h5>
-                        <p class="valor">${pokemon.height / 10 + " m"}</p>
-                      </div>
-                      <div>
-                        <h5>Weight:</h5>
-                        <p class="valor">${pokemon.weight/ 10 + " kg"}</p>
-                      </div>
-                      <div>
-                        <h5>Abilities:</h5>
-                        <p class="valor">-${pokemon.abilities.map(ab => ab.ability.name).join('<br>-')}</p>
-                      </div>
-                      <div>
-                        <h5>Type:</h5>
-                        <p class="valor">${types.join(" | ")}</p>
-                      </div>
-                      
-                    </div>
-                </div>`
-                
-            return accumulator
+
+
         }, '')
-        
-$(".containerPoke").css("display", 'Flex')
-const ul = document.querySelector('[data-js="pokemodal"]');
-$(ul).html(MdPoke);
-$("html,body").css({"overflow":"hidden"});
+    $(".containerPoke").css("display", 'Flex')
+    $("html,body").css({"overflow":"hidden"});
     })
 
 
@@ -314,6 +299,23 @@ function fecharMod(){
 };
 
 
+
+$(".MudarD").on('click', ()=>{
+    $(".InfoBox")[0].style.transform = 'rotateY(180deg)';
+    $('.MudarD').attr('disabled', true);
+    $('.MudarE').attr('disabled', false);
+
+})
+
+$(".MudarE").on('click', ()=>{
+    $(".InfoBox")[0].style.transform = 'rotateY(0deg)';
+    $('.MudarD').attr('disabled', false);
+    $('.MudarE').attr('disabled', true);
+})
+
+$(".FecharX").on('click', () => {
+    fecharMod();
+})
 
 $("#search").on('keyup', function (event) {
     if (event.keyCode !== 13) return;
@@ -327,9 +329,6 @@ $(".btn").on('click', function(){
     $('html, body').animate({scrollTop:0}, 'fast');
     $("#search").val('');
 });
-
-
-
 
 fetchPokemon();
 

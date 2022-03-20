@@ -30,7 +30,6 @@
     border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-ou;
   margin-top: 10px;
   margin-bottom: 10px;
-
   color: #000000;
   border-color: #000000;
   -webkit-transition: box-shadow 150ms ease-in-out, color 300ms ease-in-out;
@@ -38,6 +37,11 @@
 }
 
 .btnBlack:hover {
+  color: #fff;
+  box-shadow: 0 0 10px 4px #000000;
+  background-color: #000000;
+}
+.btnBlack:disabled {
   color: #fff;
   box-shadow: 0 0 10px 4px #000000;
   background-color: #000000;
