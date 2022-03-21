@@ -212,6 +212,7 @@ function searchType(tipo){
     $(".btn").attr('disabled', false);
     Ftype = tipo;
     fecharMod();
+    alert('Pode demorar um pouco, aguarde !')
     const getPokemonUrl =  id =>`https://pokeapi.co/api/v2/pokemon/${id}`;
     const pokePromises = [];
     for(let i = 1 ; i <= MP; i++){
@@ -296,6 +297,8 @@ function PokeModal(number){
 function fecharMod(){
     $(".containerPoke").css("display", 'none')
     $("html,body").css({"overflow":"auto"});
+    $(".MudarD").attr('disabled', false);
+    $(".MudarE").attr('disabled', false);
 };
 
 
