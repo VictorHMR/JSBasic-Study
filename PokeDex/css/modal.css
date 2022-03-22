@@ -106,8 +106,8 @@
     right: 30px;
     text-decoration: none;
     color: black;
-    height: 90px;
-    width: 90px;
+    padding: 10px 35px 10px 35px;
+    font-size: 60px;
   }
   .modalPoke {
     position: absolute;
@@ -115,6 +115,7 @@
     width: 87vw;
     height: 80vh;
     z-index: 99;
+    border: solid 25px rgb(21, 76, 95);
     border-radius: 10px;
     padding: 23px;
     opacity: 1;
@@ -132,6 +133,7 @@
     margin-left: auto;
     margin-right: auto;
     background-color: rgb(83, 82, 82);
+    border: solid 25px rgba(100, 4, 4, 0.301);
     border-radius: 50%;
   }
   .ModalImage img {
@@ -171,14 +173,14 @@
   .MudarE {
     position: absolute;
     top: 560px;
-    width: 100px;
-    height: 100px;
+    padding: 10px 35px 10px 35px;
+    font-size: 60px;
   }
   .MudarD {
     position: absolute;
     top: 560px;
     right: 20px;
-    width: 100px;
-    height: 100px;
+    padding: 10px 35px 10px 35px;
+    font-size: 60px;
   }
 }

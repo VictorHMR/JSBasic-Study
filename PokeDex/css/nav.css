@@ -54,7 +54,9 @@
   }
   
   @media(max-width: 999px){
-    
+    .logo{
+      font-size: 50px;
+    }
   .btn{
     font-size: 60px;
   }
