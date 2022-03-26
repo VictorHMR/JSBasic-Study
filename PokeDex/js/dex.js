@@ -323,7 +323,7 @@ $(".FecharX").on('click', () => {
     fecharMod();
 })
 
-$("#search").on('keyup', function (event) {
+$("#search").on('keyup',  (event) => {
     if (event.keyCode !== 13) return;
     searchPoke()
     $("#aviso").val("")
@@ -331,7 +331,7 @@ $("#search").on('keyup', function (event) {
     contador = 0;
 });
 
-$(".btn").on('click', function(){
+$(".btn").on('click', () =>{
     $('html, body').animate({scrollTop:0}, 'fast');
     $("#search").val('');
 });

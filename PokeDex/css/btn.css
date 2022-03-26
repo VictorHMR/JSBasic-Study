@@ -191,6 +191,7 @@
   padding-left: 35px;
   cursor: pointer;
   font-size: 22px;
+  user-select: none;
 }
 .ShinyRadio{
   position: absolute;

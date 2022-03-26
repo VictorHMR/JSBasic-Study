@@ -2,7 +2,7 @@
   justify-content: center;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.562);
+  background-color: rgba(0, 0, 0, .9);
   position: fixed;
   z-index: 99;
   display: none;
@@ -15,7 +15,7 @@
 }
 .modalPoke {
   position: absolute;
-  border: solid 5px rgb(21, 76, 95);
+  border: solid 8px rgb(11, 81, 104);
   top: 5%;
   width: 500px;
   z-index: 99;
@@ -31,9 +31,9 @@
   margin: 40px auto 0 auto;
   margin-left: auto;
   margin-right: auto;
-  background-color: rgb(83, 82, 82);
+  background-color: rgb(179, 177, 177);
   border-radius: 50%;
-  border: solid 9px rgba(100, 4, 4, 0.301);
+  border: solid 9px rgb(121, 5, 5);
 }
 .ModalImage img {
   width: 100%;
