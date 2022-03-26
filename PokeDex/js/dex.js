@@ -181,7 +181,7 @@ function searchPoke(){
                     } 
                 }
             }else{
-                pokeP = value;
+                pokeP = pokemon.name;
                 contador = 1;
                 accumulator += `
                     <li class="card ${types[0]} solo" onclick="PokeModal('${pokemon.id}')">
