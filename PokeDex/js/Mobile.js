@@ -4,7 +4,7 @@ class MobileNavbar {
       this.navList = document.querySelector(navList);
       this.navLinks = document.querySelectorAll(navLinks);
       this.activeClass = "active";
-  
+      this.types = document.getElementById("TypeMenu");
       this.handleClick = this.handleClick.bind(this);
     }
     animateLinks() {
@@ -21,6 +21,8 @@ class MobileNavbar {
       this.navList.classList.toggle(this.activeClass);
       this.mobileMenu.classList.toggle(this.activeClass);
       this.animateLinks();
+      this.types.checked = false;
+      
     }
   
     addClickEvent() {
@@ -41,8 +43,4 @@ class MobileNavbar {
   );
   mobileNavbar.init();
   
-  var topics = ['home','sobre','skills','projetos','exp']
-  
-  function NextTopic(){
-  }
   
