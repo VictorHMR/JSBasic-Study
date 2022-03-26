@@ -1,15 +1,18 @@
+/*---------------------------------------------Variaveis Globais-------------------------------------------------------*/
 
- var Ninicial;
- var NFinal = 100;
- var regiao;
- var GNumber;
- let pokeP;
- var contador = 0;
- var Ftype;
- const MP = 809;
+var Ninicial;
+var NFinal = 100;
+var regiao;
+var GNumber;
+let pokeP;
+var contador = 0;
+var Ftype;
+const MP = 809;
 const url= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon";
 var urlM = url;
 
+
+/*---------------------------------------------Funções-------------------------------------------------------------*/
 function fetchPokemon(geracao){
     const getPokemonUrl =  id =>`https://pokeapi.co/api/v2/pokemon/${id}`;
     const pokePromises = [];
@@ -18,7 +21,7 @@ function fetchPokemon(geracao){
     Ftype = '';
 switch(geracao){
     case 0:  Ninicial = 1;
-             regiao= "Pokedex(1-7gn)";
+             regiao= "Pokedex(1-7gen)";
              GNumber=0;
              $("#mais").show();
     break;
@@ -74,7 +77,7 @@ switch(geracao){
     break;
     default: Ninicial = 1;
              NFinal = 100;
-             regiao= "Pokedex(1-7gn)";
+             regiao= "Pokedex(1-7gen)";
              GNumber=0;
              $("#mais").show();
              $(".btn").attr('disabled', false);
@@ -212,7 +215,7 @@ function searchType(tipo){
     $(".btn").attr('disabled', false);
     Ftype = tipo;
     fecharMod();
-    alert('Pode demorar um pouco, aguarde !')
+    alert('Pode demorar um pouco dependendo da sua conexão, aguarde !')
     const getPokemonUrl =  id =>`https://pokeapi.co/api/v2/pokemon/${id}`;
     const pokePromises = [];
     for(let i = 1 ; i <= MP; i++){
@@ -301,7 +304,7 @@ function fecharMod(){
     $(".MudarE").attr('disabled', false);
 };
 
-
+/*---------------------------------------------Eventos----------------------------------------------------------*/
 
 $(".MudarD").on('click', ()=>{
     $(".InfoBox")[0].style.transform = 'rotateY(180deg)';
