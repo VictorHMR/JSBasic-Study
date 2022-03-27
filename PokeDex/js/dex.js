@@ -336,6 +336,11 @@ $(".btn").on('click', () =>{
     $("#search").val('');
 });
 
+$(document).keydown(function(e) {
+    if(e.which === 27){
+        fecharMod();
+    } 
+});
 fetchPokemon();
 
 

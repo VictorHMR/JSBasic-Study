@@ -177,7 +177,7 @@
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     padding: 5px;
     margin-top: 2px;
-    grid-template-rows: minmax(20px, 200px);
+    grid-template-rows: 180px;
   }
   .InfoBox {
     padding: 20px;

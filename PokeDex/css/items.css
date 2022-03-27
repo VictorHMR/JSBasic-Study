@@ -103,6 +103,9 @@ body {
 .inputS {
   position: relative;
   left: -300px;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 12px;
 }
 #aviso {
   font-size: 20px;

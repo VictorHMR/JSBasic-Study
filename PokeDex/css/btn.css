@@ -188,7 +188,8 @@
   color: white;
   display: block;
   position: relative;
-  padding-left: 35px;
+  padding-left: 25px;
+  padding-top: 3px;
   cursor: pointer;
   font-size: 22px;
   user-select: none;
