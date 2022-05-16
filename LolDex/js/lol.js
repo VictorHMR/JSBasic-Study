@@ -1,4 +1,4 @@
-var champsURL = "http://ddragon.leagueoflegends.com/cdn/12.9.1/data/en_US/champion.json";
+var champsURL = "https://ddragon.leagueoflegends.com/cdn/12.9.1/data/en_US/champion.json";
 var List = document.querySelector('#champList')
 var Clist;
 
