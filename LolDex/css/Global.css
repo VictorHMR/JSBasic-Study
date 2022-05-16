@@ -28,5 +28,10 @@ body{
 #champList{
   margin-top: 5%;
   margin-left: 2%;
-  list-style-type: disc;
+  list-style: none;
+  font-size: 20px;
+  vertical-align: middle;
+}
+#champList img{
+  width: 50px;
 }
